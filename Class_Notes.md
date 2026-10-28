@@ -37,6 +37,8 @@ Add-on services:
 1. We can isolate team resource in the clusters.  
 2. we can delegate user RBAC  
 3. (cpu memory) Quota & limit.
+4. to create new project oc new-project projectname
+5. oc delete project project name
 
 ## Oc create ns example or oc new-project example both are same  
 
@@ -105,5 +107,7 @@ NAME        HOST/PORT                                             PATH   SERVICE
 console     console-openshift-console.apps.king.flahcloud.com            console     https   reencrypt/Redirect   None
 downloads   downloads-openshift-console.apps.king.flahcloud.com          downloads   http    edge/Redirect        None
 [root@localhost ~]#
+
+
 
 
