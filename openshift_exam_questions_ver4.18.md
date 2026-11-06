@@ -9,6 +9,25 @@ The user account aldrin is present and can log in with password roonkere The use
 The user account wozniak is present and can log in with password glegunge.  
 
 **use GUI in exam**
+**Solution**
+First create users htpasswd -c -b -B - openshift-passwd jobs redhat
+htpasswd -b -B - openshift-passwd kamran redhat
+htpasswd -b -B - openshift-passwd woznaik redhat
+
+Login to GUI admin> cluster settings > configuration > Oauth > htpasswd > cat openshift-passwd get the user put users into identity provider GUI then name of provider ex280-htpasswd > Add
+
+oc get secret -n openshift-config take the backup of latest secret > oc get secret -n openshift-config secretname  -o yaml > secret.yml 
+
+vi secret.yml  put your secret name > oc create -f secret.yml 
+oc get oauth/cluster -o yaml > is.yml  >  vi is.yml  update secret name 
+oc replace -f is.yml  >> oc get pod -n openshift-authentication
+oc login -u username -p password 
+
+
+
+
+
+
 
 if auth fails 
 =================
