@@ -10,23 +10,19 @@ The user account wozniak is present and can log in with password glegunge.
 
 **use GUI in exam**
 **Solution**
-First create users htpasswd -c -b -B - openshift-passwd jobs redhat
-htpasswd -b -B - openshift-passwd kamran redhat
+### First create users htpasswd -c -b -B - openshift-passwd jobs redhat  
+## htpasswd -b -B - openshift-passwd kamran redhat
 htpasswd -b -B - openshift-passwd woznaik redhat
 
-Login to GUI admin> cluster settings > configuration > Oauth > htpasswd > cat openshift-passwd get the user put users into identity provider GUI then name of provider ex280-htpasswd > Add
+Login to GUI admin> cluster settings > configuration > Oauth > htpasswd > 
+# cat openshift-passwd get the user put users into identity provider GUI then name of provider ex280-htpasswd > Add
 
-oc get secret -n openshift-config take the backup of latest secret > oc get secret -n openshift-config secretname  -o yaml > secret.yml 
+## oc get secret -n openshift-config take the backup of latest secret > oc get secret -n openshift-config secretname  -o yaml > secret.yml  > oc apply -f secret.yml
 
-vi secret.yml  put your secret name > oc create -f secret.yml 
-oc get oauth/cluster -o yaml > is.yml  >  vi is.yml  update secret name 
-oc replace -f is.yml  >> oc get pod -n openshift-authentication
+## vi secret.yml  put your secret name > oc create -f secret.yml 
+## oc get oauth/cluster -o yaml > is.yml  >  vi is.yml  update secret name 
+## oc replace -f is.yml  >> oc get pod -n openshift-authentication
 oc login -u username -p password 
-
-
-
-
-
 
 
 if auth fails 
@@ -38,7 +34,7 @@ Configure cluster permissions
 configure your openshift cluster to meet the following requirements.  
 The user account jobs can perform cluster administration tasks.  
 The user account wozniak can create projects  
-The user account wozniak cant perform cluster administration task ,The use account armstrong cant create projects  
+The user account wozniak cannot  perform cluster administration task ,The use account armstrong cannot  create projects  
 The user account kubeadmin is not present  
 
 **use GUI in exam**
@@ -51,7 +47,7 @@ manhattan
 gemini  
 bluebook  
 titan  
-The user account armstrong is an adminstrator for project apollo and project gemini The user account wozniak can view project titan but not administer or delete it.  
+The user account armstrong is an adminstrator for project apollo and project gemini, The user account wozniak can view project titan but not administer or delete it.  
 
 **use GUI in exam**
 
