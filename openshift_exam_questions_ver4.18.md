@@ -37,6 +37,10 @@ The user account wozniak can create projects  **self_provisioner**
 The user account wozniak cannot  perform cluster administration task ,The use account armstrong cannot  create projects  
 The user account kubeadmin is not present  
 
+**Login to GUI**
+1> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xyz > **Role Name** **cluster_admin**  > User name 
+2> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xab > **Role Name** **self-provisioner** > wozniak
+
 **use GUI in exam**
 
 **Question3**
