@@ -29,15 +29,16 @@ if auth fails
 =================
 echo "192.168.64.129 oauth-openshift.apps.king.flahcloud.com" >> /etc/hosts
 
-**Question2**
-Configure cluster permissions  
+**Question2**  
+Configure cluster permissions    
 configure your openshift cluster to meet the following requirements.  
 The user account jobs can perform cluster administration tasks.  **cluster_admin**
 The user account wozniak can create projects  **self_provisioner**
 The user account wozniak cannot  perform cluster administration task ,The use account armstrong cannot  create projects  
-The user account kubeadmin is not present  
+The user account kubeadmin is not present   
 
 **Login to GUI**
+
 1> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xyz > **Role Name** **cluster_admin**  > User name 
 2> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xab > **Role Name** **self-provisioner** > wozniak
 3> We have to remove the **self-provisioners** if self-proviosners not their it means already deleted 
