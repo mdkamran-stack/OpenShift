@@ -48,15 +48,15 @@ The user account kubeadmin is not present
 **Question3**
 
 ## Configure Project permissions.configure your Openshift cluster to meet the following requirements: The following projects exists.  
-Apollo  
+apollo  
 manhattan  
 gemini  
 bluebook  
 titan  
-The user account armstrong is an adminstrator for project apollo and project gemini, The user account wozniak can view project titan but not administer or delete it.  
+The user account armstrong is an adminstrator for project apollo and project gemini, The user account wozniak can view project titan but not administer or delete it.    
 
-1> Goto HOME > Projects > Create projevt like apollo gemini , bluebook, titan > Display name anything > 
-2> User management > rolebinding > Crete rolebinding **namespace** >> name anything > namesapce>  project apollo &  > selectrole > admin > username armstring && same as for gemini project
+1> Goto HOME > Projects > Create projevt like apollo gemini , bluebook, titan > Display name anything >   
+2> User management > rolebinding > Crete rolebinding **namespace** >> name anything > namesapce>  project apollo &  > selectrole > admin > username armstring && same as for gemini project  
 2> here we have to bind **select role view** 
 
 **use GUI in exam**
@@ -89,10 +89,12 @@ The maximum no of pods does not exceed 3
 The max no of service does not exceed 6  
 
 **use CLI in exam**
-
-oc new-project manhattan >> oc project manhattan >> 
+oc project
+oc new-project manhattan >> oc project manhattan >>  
+oc create quota ex280-quota --help   
 
 --hard=cpu=2,memory=160Mi,pods=3,services=6,replicationcontrollers=3
+
 
 **Question6**
 
