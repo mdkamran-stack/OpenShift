@@ -114,11 +114,39 @@ The application produces output
 **Question7**
 
 Deploy an application   
-EX280 exam prepared for Deploy the chart named **redhat-movie** in the project ascii-movie from the repository   
-http://helm.domain20.example.com/chart//    
-you may use the telnet or ne commands to validate the deployment.    
+EX280 exam prepared for Deploy the chart named **redhat-movie** in the **project ascii-movie** from the repository   
+http://helm.domain20.example.com/chart/   
+you may use the telnet or ne commands to validate the deployment.  
 
+========
+oc new-project ascii-movie
+helm repo add xyz http://helm.domain20.example.com/chart
+helm search repo xyz   
+helm install redhat-movie xyz/etherpad -n ascii-movie 
+oc get pod -n ascii-movie 
+oc get deploy -n ascii-movie 
+**To verify using telnet** 
+oc get route -n ascii-movie   
+telnet host
 
+**Question8**
+Configure a secret  
+Configure a secret in the math project with the following requiremnets:  
+The name of the secret is: magic  
+The secret defines a key with name:decoder_ring   
+0000 VRCKukQdrosbcl0c2ZyhDk- The secret defines the key with value: XPWPKDDCP3T  
+===========
+
+Create one project by given name 
+login gui underworkload their is secret put the secret **name , key and value**
+
+**Question9**
+
+Configure an application to use a secret   
+Configure the application called qed in the math project with the following requirements:  
+The application uses the secret previously created called:magic The secret defines an environment variable with the name: DECODER_RING  
+The application output no longer display: SORRY , application is not configured correctly.  
+==========================
 
 
 
