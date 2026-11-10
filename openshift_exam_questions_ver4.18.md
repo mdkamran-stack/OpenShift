@@ -129,24 +129,73 @@ oc get deploy -n ascii-movie
 oc get route -n ascii-movie   
 telnet host
 
-**Question8**
-Configure a secret  
-Configure a secret in the math project with the following requiremnets:  
-The name of the secret is: magic  
-The secret defines a key with name:decoder_ring   
-0000 VRCKukQdrosbcl0c2ZyhDk- The secret defines the key with value: XPWPKDDCP3T  
+**Question 8**
+
+Configure a secret
+
+Configure a secret in the math project with the following requirements:
+
+The name of the secret is: magic
+
+The secret defines a key with name: decoder_ring
+
+The secret defines the key with value: XPWPKDDCP3T
+
 ===========
 
 Create one project by given name 
 login gui underworkload their is secret put the secret **name , key and value**
 
-**Question9**
+**Question 9**  
 
-Configure an application to use a secret   
-Configure the application called qed in the math project with the following requirements:  
-The application uses the secret previously created called:magic The secret defines an environment variable with the name: DECODER_RING  
-The application output no longer display: SORRY , application is not configured correctly.  
+Configure an application to use a secret.
+
+Configure the application called qed in the math project with the following requirements:
+
+The application uses the secret previously created called: magic.
+
+The secret defines an environment variable with the name: DECODER_RING.  
+
+The application output should no longer display: SORRY, application is not configured correctly.
+
 ==========================
+oc set env deployment qed --from=secret/magic 
+
+oc get route 
+
+curl http://HOST/PORT
+
+**Question 10**  
+
+Configure a service account
+Configure a service account in the apples project to meet the following requirements.  
+The name of the service account is ex280sa  
+The service account allows pods to be run as any available user  
+
+============
+oc new-project apples  
+oc  create sa ex280sa  
+**oc adm policy add-scc-to -user anyuid -z ex280sa** 
+
+=============
+**Question 11** 
+
+Deploy an application  
+Deploy the application called oranges in the apples project so that the following condition.  
+No configuration components have been added or removed  
+The application produces output  
+The application uses the ex280sa service account   
+
+**Question 12**
+
+Deploy an application called atlas in the mercury project so that the following condition.  
+No configuration components have been added or removed   
+The application produces output  
+
+
+
+
+
 
 
 
