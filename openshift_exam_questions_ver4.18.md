@@ -4,6 +4,7 @@ Kubeadmin
 Password:  ZXUPv-bv9xC-T4wAj-ngJuM
 =======================================
 
+# lab start declarative-manifests
 
 **Question-1**
 Configure Identity Provider   
