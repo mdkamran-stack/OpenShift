@@ -1,3 +1,10 @@
+console openshift
+=================================
+Kubeadmin 
+Password:  ZXUPv-bv9xC-T4wAj-ngJuM
+=======================================
+
+
 **Question-1**
 Configure Identity Provider   
 Configure Your Openshift cluster to use an HTPasswd identity provider with the Following.  
