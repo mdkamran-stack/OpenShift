@@ -104,7 +104,7 @@ The max no of service does not exceed 6
 **use CLI in exam**
 oc project
 oc new-project manhattan >> oc project manhattan >>  
-oc create quota ex280-quota --help   
+# oc create quota ex280-quota --help   
 
 --hard=cpu=2,memory=160Mi,pods=3,services=6,replicationcontrollers=3
 
@@ -120,6 +120,39 @@ The route uses a CA signed certificate with the follwoing subject fields:
 /C=US/ST=NV/L=HIKO/O=CIA/OU=UASF/CN=classiffied.apps.domain20.example.com  
 The application is reachable only at the following address: https://classified.apps.doman20.eample.com  
 The application produces output   
+
+**First we have create the same env in our practice lab.**
+
+***oc new-project area51***  
+
+***oc create deploy oxcart --image=registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:latest***  
+
+***oc expose deployment oxcart --port=8080***  
+
+**Route is software define LB in OCP three tyep 1. EDGE  2.passthrogh 3. Re-encru**
+
+## To create self sign certificate
+***openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt***  && put the given informations. like ca org .  domain name should be in exam its diff classified.apps.doman20.eample.com
+## To create Routing 
+***oc create route edge --service oxcart --hostname=classified.apps.ocp4.example.com --cert=server.crt --key=server.key***  
+## To verify
+**curl -kv https://classified.apps.ocp4.example.com**
+
+## In Exam 
+***oc project project51***  
+***oc get deploy***
+***oc get service***  
+## now build SSL certificate from cmd of given script Then ls to veriy our .crt & .key file 
+
+## oc create route edge --service oxcart --hostname=given --cert=*.crt --key=*.key  
+
+ ## In exam we have to check route ##
+ ***oc get route***  
+
+ ***Now we have delete the exisiting route oc delete route oxcart***
+ ***Now we have create own route*** 
+ ***oc create route edge --service oxcart --hostname=ram.apps.ocp4.example.com --cert=server.crt --key=server.key***
+
 
 **oc create deployment oxcart  nginx-test --image=docker.io/nginxinc/nginx-unprivileged:latest** use this image for practice.  
 
