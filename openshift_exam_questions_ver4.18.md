@@ -4,6 +4,11 @@ Kubeadmin
 Password:  ZXUPv-bv9xC-T4wAj-ngJuM
 =======================================
 
+Ram sir redhat 
+---------------
+ram.redhat123
+jaishrikrishna@2023
+
 # lab start declarative-manifests
 
 **Question-1**
