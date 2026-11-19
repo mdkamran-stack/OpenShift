@@ -176,20 +176,21 @@ you may use the telnet or nc commands to validate the deployment.
 
 # Question 8
 
-Configure a secret
+**Configure a secret  # Their are 3 types of secret generic 2tls 3 docker registry**
+**Configure a secret in the math project with the following requirements:**
+**The name of the secret is: magic**
+**The secret defines a key with name: decoder_ring**
+**The secret defines the key with value: XPWPKDDCP3T**
 
-Configure a secret in the math project with the following requirements:
-
-The name of the secret is: magic
-
-The secret defines a key with name: decoder_ring
-
-The secret defines the key with value: XPWPKDDCP3T
-
-===========
+=======
+**cmd line** oc new-project math  **oc create secret generic magic --from-literal decoder_ring="aaaa"**
 
 Create one project by given name 
-login gui underworkload their is secret put the secret **name , key and value**
+**login gui underworkload their is secret put the secret name , key and value**
+
+<img width="1527" height="498" alt="image" src="https://github.com/user-attachments/assets/27dfe209-a252-4860-8ae8-499cfb7c24af" />
+
+
 
 # Question 9  
 
