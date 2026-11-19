@@ -196,20 +196,33 @@ Create one project by given name
 
 Configure an application to use a secret.
 
-Configure the application called qed in the math project with the following requirements:
+Configure the application called **qed** in the math project with the following requirements:
 
 The application uses the secret previously created called: magic.
 
 The secret defines an environment variable with the name: DECODER_RING.  
 
-The application output should no longer display: SORRY, application is not configured correctly.
+The application output should no longer display: SORRY, application is not configured correctly.  
 
-==========================
-oc set env deployment qed --from=secret/magic 
+## we are deploying dummy app for practice 
+**oc create deployment --image registry.ocp4.example.com:8443/redhattraining/hello-world-nginx**
+**oc get deployment**
+**oc expose deployment qed --port=8080**
+**oc expose service qed**
+**oc get route**
+## To verify we will get some result instead of sorry
+**curl and hostpath**
 
-oc get route 
+## In exam we have to map using below 
 
-curl http://HOST/PORT
+***oc set env deployment qed --from=secret/magic***
+## To verify secret is mapped or not in deployment file it will show decoder_ring
+***oc edit deployment >> To check the Decoder_ring is mapped properly***
+**After that new pod will create**
+
+***oc get route***
+
+***curl http://HOST/PORT***
 
 **Question 10**  
 
