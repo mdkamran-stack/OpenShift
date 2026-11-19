@@ -159,8 +159,8 @@ The application produces output
 
 **Question7**
 
-Deploy an application   
-EX280 exam prepared for Deploy the chart named **redhat-movie** in the **project ascii-movie** from the repository   
+**Deploy an application**
+**EX280 exam prepared for Deploy the chart named **redhat-movie** in the **project ascii-movie** from the repository** 
 http://helm.domain20.example.com/chart/   
 you may use the telnet or ne commands to validate the deployment.  
 
