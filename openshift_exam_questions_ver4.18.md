@@ -11,7 +11,7 @@ jaishrikrishna@2023
 
 # lab start declarative-manifests
 
-**Question-1**
+# Question-1
 Configure Identity Provider   
 Configure Your Openshift cluster to use an HTPasswd identity provider with the Following.  
 The name of the identity provider is ex280-htpasswd  
@@ -42,7 +42,7 @@ if auth fails
 =================
 echo "192.168.64.129 oauth-openshift.apps.king.flahcloud.com" >> /etc/hosts
 
-**Question2**  
+# Question2 
 Configure cluster permissions    
 configure your openshift cluster to meet the following requirements.  
 The user account jobs can perform cluster administration tasks.  **cluster_admin**  
@@ -58,7 +58,7 @@ The user account kubeadmin is not present
 4 **NOTE** One we completed all questions at last we have to goto **WORKload** >> Secret >> under name space **kube-system** delete kubeadmin  
 **use GUI in exam**
 
-**Question3**
+# Question3
 
 ## Configure Project permissions.configure your Openshift cluster to meet the following requirements: The following projects exists.  
 apollo  
@@ -74,7 +74,7 @@ The user account armstrong is an adminstrator for project apollo and project gem
 
 **use GUI in exam**
 
-**Question4**
+# Question4
 
 Configure groups
 Configure your Openshift cluster to meet the following requirements.  
@@ -90,7 +90,7 @@ Members of the pilot group have view permission in the apollo Project.
 2> role-binding  select rolebinding namespace role binding > select namespace and Rolename & goups name permission edit in second case give permission view  
 
 
-**Question5**
+# Question5
 
 **Configure Quota**
 Configure your openshift cluster to use quotas in the manhattan project with following reuirements.  
@@ -109,7 +109,7 @@ oc new-project manhattan >> oc project manhattan >>
 --hard=cpu=2,memory=160Mi,pods=3,services=6,replicationcontrollers=3
 
 
-**Question6**
+# Question6
 
 Configure a secure route  
 Configure the oxcart application in the **area51** project with the following requirements:  
@@ -161,21 +161,20 @@ The application produces output
 
 **Deploy an application**  
 **EX280 exam prepared for Deploy the chart named **redhat-movie** in the **project ascii-movie** from the repository**   
-http://helm.domain20.example.com/chart/   
-you may use the telnet or ne commands to validate the deployment.  
+**http://helm.domain20.example.com/chart/**   
+you may use the telnet or nc commands to validate the deployment.  
 
 ========
-oc new-project ascii-movie
-helm repo add xyz http://helm.domain20.example.com/chart
-helm search repo xyz   
-helm install redhat-movie xyz/etherpad -n ascii-movie 
-oc get pod -n ascii-movie 
-oc get deploy -n ascii-movie 
-**To verify using telnet** 
-oc get route -n ascii-movie   
-telnet host
+**oc new-project ascii-movie**
+**helm repo add xyz http://helm.domain20.example.com/chart**
+**helm search repo xyz**
+**helm install redhat-movie xyz/etherpad -n ascii-movie** 
+**oc get pod**
+**oc get deploy** 
+**oc get route -n ascii-movie**
+**To verify using telnet or nc**
 
-**Question 8**
+# Question 8
 
 Configure a secret
 
@@ -192,7 +191,7 @@ The secret defines the key with value: XPWPKDDCP3T
 Create one project by given name 
 login gui underworkload their is secret put the secret **name , key and value**
 
-**Question 9**  
+# Question 9  
 
 Configure an application to use a secret.
 
