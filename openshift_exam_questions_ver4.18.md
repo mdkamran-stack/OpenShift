@@ -224,7 +224,7 @@ The application output should no longer display: SORRY, application is not confi
 
 ***curl http://HOST/PORT***
 
-**Question 10**  
+# Question 10
 
 Configure a service account
 Configure a service account in the apples project to meet the following requirements.  
@@ -232,36 +232,131 @@ The name of the service account is ex280sa
 The service account allows pods to be run as any available user  
 
 ============
-oc new-project apples  
-oc  create sa ex280sa  
-**oc adm policy add-scc-to -user anyuid -z ex280sa** 
+***oc new-project apples*** 
+***oc create sa ex280sa*** 
+*****oc adm policy add-scc-to -user anyuid -z ex280sa***** 
 
 =============
-**Question 11** 
+# Question 11
 
 Deploy an application  
 Deploy the application called oranges in the apples project so that the following condition.  
 No configuration components have been added or removed  
 The application produces output  
 The application uses the ex280sa service account   
+==============
+## In exam will get pod in error/crashloopback issue.
+## The End goal is we have to map service acc to deployemnt
+**for our lab practice**
+**oc new-project apple**
+oc ge sa
+**oc create deploy orange --image=registry.ocp4.example.com:8443/redhattraining/gitlab-ce:8.4.3-ce.0**
+**oc expose deployment orange --port=8080**
+**oc expose service orange**
+**oc get po**
+**oc logs orange** ***We will get permission denied**
+***In exam***
+oc get po 
+oc get sa ex280
+oc get route 
+oc set set service account 
+oc get endpoint  ***This cmd show instead of ip it show none once we map ths labels then it will show ip address in endpoint**
+## oc get pod --show-labels **service selector values to pod label match**
+## oc edit service orange **we have make labes in service as labels cmd what we get**
+oc get route will get url check in browser 
 
-**Question 12**
+
+oc set serviceaccount deploy orange ex280-sa
+
+# Question 12
 
 Deploy an application called atlas in the mercury project so that the following condition.  
 No configuration components have been added or removed   
 The application produces output  
+-------
+## Main reason for Deployment and pod failure is its consumed more memory 
+## So 80GB so node having Memory issue will not start 
+## We will reduce or remove the memory portion from deployment after POD/Deployment will UP.
+## Project already Configure already
+In Lab we will create Deployment and but in exam all are created.
+Images: “registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:v1.0"
+<img width="975" height="224" alt="image" src="https://github.com/user-attachments/assets/db1bb240-2800-4a12-8aa3-676061eaca46" />
+# Pod is Pending Due resource Crunch 
+# we have to go to deployment in exam 
+## oc edit deployment name of deploy
 
+## Finally we have to check the route using curl http://
 
-**Question 13**
+# Question 13
 
-Configure a network policy using the databases and checker projects with the following requirements.  
-The database project has network policy with the name db-allow-mysql-conn based on pod selector label.  
-network.openshift.io/policy-group   
-Connection to the databse project are restricted to deployments from the checker project The network policy is filtered by project selector using the team devsecops label and pod selector using the deploymentb-mysql label   
-The application can establish a connection to port 3306/TCP   
-you can check your work by examining the logs in the checker project.  
+***This question we have to perform via GUI in exam***
+
+**Configure a network policy using the databases and checker projects with the following requirements.**  
+**The database project has network policy with the name db-allow-mysql-conn based on pod selector label** 
+**network.openshift.io/policy-group**  
+**Connection to the databse project are restricted to deployments from the checker project The network policy is filtered by project selector using the**
+**team devsecops label and pod selector using the deploymentb-mysql label**  
+**The application can establish a connection to port 3306/TCP**   
+**you can check your work by examining the logs in the checker project**
 
 ===========================
+In NS we have to create a policy on pod labels match **network.openshift.io/policy-group** we have to allow lable team devsecops 
+
+**oc create ns database 
+**oc create ns checker 
+Now we have to deploy app in both project for practice.
+oc create deploy mysql --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n database --dry-run -o yaml > deploy.yml
+
+## It is already their in exam this is for practice purpose 
+<img width="647" height="412" alt="image" src="https://github.com/user-attachments/assets/3ae6cfe5-3b20-4214-9c95-9d4d6ea38a53" />
+
+oc create -f deploy.yml
+
+
+
+<img width="1486" height="639" alt="image" src="https://github.com/user-attachments/assets/d65da9e5-bbcf-4e79-8795-6b1afc5f8395" />
+
+
+
+
+we will get same type of app in checker namespace
+oc create deploy wordpress --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n checker --dry-run -o yaml > deploy.yml
+
+<img width="842" height="430" alt="image" src="https://github.com/user-attachments/assets/c4be9830-bf5c-45bd-b524-5842431e44ed" />
+
+#oc create -f deploy.yml -n checker
+
+## NS also having labels oc label ns checker team:devsceops it laready their in exam 
+
+oc get po -n database 
+oc get po -n checker 
+
+# In exam checker namespace pod in crashloopbakc due to not connecting to app 
+
+# In exam we have to perform graphical it is easy way 
+# oc whoami --show-console 
+# goto network >> Network policy switch project database create network policy 
+**oc get pod -n database --show-labels**
+## Allow pod inside the cluster 
+## Add namespace selector 
+Lables & selector 
+
+## Below ss show all 3 values which we have to placed in GUI n/w policy 
+
+<img width="1667" height="360" alt="image" src="https://github.com/user-attachments/assets/b4273dd1-b8aa-468c-bc6c-154d48b7893b" />
+
+<img width="1041" height="489" alt="image" src="https://github.com/user-attachments/assets/e1c7fe7f-5c9c-498c-b278-58be867af5fd" />
+
+<img width="1092" height="603" alt="image" src="https://github.com/user-attachments/assets/f9f848ba-fc63-4c74-af41-62b96060a4cc" />
+# Add the port 3306 & res
+<img width="685" height="165" alt="image" src="https://github.com/user-attachments/assets/38ea398f-c4e9-4277-9ff5-bbceb650d5c8" />
+# Finally after delting the pod in checker namsepace it will come in running mode
+
+
+
+
+
+
 
 
 
