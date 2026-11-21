@@ -162,32 +162,28 @@ The application produces output
 **Deploy an application**  
 **EX280 exam prepared for Deploy the chart named **redhat-movie** in the **project ascii-movie** from the repository**   
 **http://helm.domain20.example.com/chart/**   
-you may use the telnet or nc commands to validate the deployment.  
+you may use the telnet or nc commands to validate the deployment.
 
-========
-**oc new-project ascii-movie**
-# for practice 
-**helm repo add xyz http://helm.ocp4.example.com/charts**
-**helm search repo xyz**
-**helm install redhat-movie xyz/etherpad -n ascii-movie** 
-**oc get pod**
-**oc get deploy** 
-**oc get route -n ascii-movie**
-**To verify using telnet or nc**
-if pod not running in local lab then edit deployment and update image  registry.ocp4.example.com:8443/etherpad/etherpad:1.8.18 
-# In exam 
+**oc new-project ascii-movie**  
+# for practice   
+**helm repo add xyz http://helm.ocp4.example.com/charts**  
+**helm search repo xyz**  
+**helm install redhat-movie xyz/etherpad -n ascii-movie**   
+**oc get pod**   
+**oc get deploy**    
+**oc get route -n ascii-movie**   
+**To verify using telnet or nc**   
+if pod not running in local lab then edit deployment and update image  registry.ocp4.example.com:8443/etherpad/etherpad:1.8.18   
+# In exam  
 
-we have to create project 
-helm repo add xyz https:app.domain.com
-helm repolist
-helm search repo 
-helm install movie chart-name 
-oc get po 
-oc get deploy
-oc get route 
-
-
-
+**we have to create project**
+**helm repo add xyz https:app.domain.com** 
+**helm repolist**  
+**helm search repo**  
+**helm install movie chart-name**  
+**oc get po**  
+**oc get deploy**
+**oc get route**
 
 
 # Question 8
