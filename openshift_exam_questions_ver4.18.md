@@ -3,6 +3,7 @@ console openshift
 Kubeadmin 
 Password:  ZXUPv-bv9xC-T4wAj-ngJuM
 =======================================
+# while oc whoami getting EOF use this cmd lab start auth-providers 
 
 Ram sir redhat 
 ---------------
