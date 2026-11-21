@@ -119,42 +119,41 @@ Traffic between the client and the router is encrypted
 Traffic between the router and the service is unencrypted  a
 The route uses a CA signed certificate with the follwoing subject fields:  
 /C=US/ST=NV/L=HIKO/O=CIA/OU=UASF/CN=classiffied.apps.domain20.example.com  
-The application is reachable only at the following address: https://classified.apps.doman20.eample.com  
+The application is reachable only at the following address: https://classified.apps.ocp4.example.com  
 The application produces output   
 
 **First we have create the same env in our practice lab.**
 
 ***oc new-project area51***  
 
-***oc create deploy oxcart --image=registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:latest***  
+***oc create deploy oxcart --image=registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:v1.0***  
 
 ***oc expose deployment oxcart --port=8080***  
 
-**Route is software define LB in OCP three tyep 1. EDGE  2.passthrogh 3. Re-encru**
+**Route is software define LB in OCP three tyep 1. EDGE  2.passthrogh 3. Re-encrypt**
 
 ## To create self sign certificate
 ***openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt***  && put the given informations. like ca org .  domain name should be in exam its diff classified.apps.doman20.eample.com
 ## To create Routing 
-***oc create route edge --service oxcart --hostname=classified.apps.ocp4.example.com --cert=server.crt --key=server.key***  
+## oc get service will get name of service 
+***oc create route edge --service oxcart --cert=certifiacte.crt --key=private.key --hostname=classified.apps.ocp4.example.com***  
 ## To verify
 **curl -kv https://classified.apps.ocp4.example.com**
 
 ## In Exam 
-***oc project project51***  
+***oc new-project projectname***  
 ***oc get deploy***
 ***oc get service***  
-## now build SSL certificate from cmd of given script Then ls to veriy our .crt & .key file 
-
-## oc create route edge --service oxcart --hostname=given --cert=*.crt --key=*.key  
-
- ## In exam we have to check route ##
- ***oc get route***  
-
+***oc get route***  
+# In exam we will get script named newcert pass argument hello 
+# now build SSL certificate from cmd of given script called newcert Then ls to veriy our .crt & .key file 
+ 
  ***Now we have delete the exisiting route oc delete route oxcart***
- ***Now we have create own route*** 
- ***oc create route edge --service oxcart --hostname=ram.apps.ocp4.example.com --cert=server.crt --key=server.key***
+ ***Now we have create own route two way cmd or GUI**if UI goto Network Routes in specified project.
+ ## Below is cmd line 
+ ***oc create route edge --service oxcart --cert=certificate.crt --key=private.key --hostname=classified.apps.ocp4.example.com***
 
-
+## In laptop
 **oc create deployment oxcart  nginx-test --image=docker.io/nginxinc/nginx-unprivileged:latest** use this image for practice.  
 
 
@@ -167,13 +166,29 @@ you may use the telnet or nc commands to validate the deployment.
 
 ========
 **oc new-project ascii-movie**
-**helm repo add xyz http://helm.domain20.example.com/chart**
+# for practice 
+**helm repo add xyz http://helm.ocp4.example.com/charts**
 **helm search repo xyz**
 **helm install redhat-movie xyz/etherpad -n ascii-movie** 
 **oc get pod**
 **oc get deploy** 
 **oc get route -n ascii-movie**
 **To verify using telnet or nc**
+if pod not running in local lab then edit deployment and update image  registry.ocp4.example.com:8443/etherpad/etherpad:1.8.18 
+# In exam 
+
+we have to create project 
+helm repo add xyz https:app.domain.com
+helm repolist
+helm search repo 
+helm install movie chart-name 
+oc get po 
+oc get deploy
+oc get route 
+
+
+
+
 
 # Question 8
 
