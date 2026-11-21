@@ -95,7 +95,7 @@ Members of the pilot group have view permission in the apollo Project.
 
 **Configure Quota**
 Configure your openshift cluster to use quotas in the manhattan project with following reuirements.  
-The name of the quota is: **ex280-quota**
+The name of the quota is: **ex280-quota**  
 The amount of memory consumed across all conatiner may not exceed 160 Mi  
 The total amount of cpu consumed across all conatiner may not exceed 2 full cores  
 The maximum no .of replication controllers does not exceed 3  
