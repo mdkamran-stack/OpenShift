@@ -310,15 +310,15 @@ Images: “registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:v1.0"
 
 # Question 13
 
-***This question we have to perform via GUI in exam***
+## This question we have to perform via GUI in exam***
 
 **Configure a network policy using the databases and checker projects with the following requirements.**  
-**The database project has network policy with the name db-allow-mysql-conn based on pod selector label** 
-**network.openshift.io/policy-group**  
-**Connection to the databse project are restricted to deployments from the checker project The network policy is filtered by project selector using the**
-**team devsecops label and pod selector using the deploymentb-mysql label**  
-**The application can establish a connection to port 3306/TCP**   
-**you can check your work by examining the logs in the checker project**
+**The database project has network policy with the name db-allow-mysql-conn based on pod selector label**    
+**network.openshift.io/policy-group**   
+**Connection to the databse project are restricted to deployments from the checker project The network policy is filtered by project selector using the**  
+**team devsecops label and pod selector using the deploymentb-mysql label**    
+**The application can establish a connection to port 3306/TCP**    
+**you can check your work by examining the logs in the checker project**   
 
 ===========================
 In NS we have to create a policy on pod labels match **network.openshift.io/policy-group** we have to allow lable team devsecops 
