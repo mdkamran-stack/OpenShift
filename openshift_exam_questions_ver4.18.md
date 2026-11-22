@@ -48,7 +48,8 @@ Configure cluster permissions
 configure your openshift cluster to meet the following requirements.  
 The user account jobs can perform cluster administration tasks.  **cluster_admin**  
 The user account wozniak can create projects  **self_provisioner**  
-The user account wozniak cannot  perform cluster administration task ,The use account armstrong cannot  create projects  
+The user account wozniak cannot  perform cluster administration task 
+The use account armstrong cannot  create projects  
 The user account kubeadmin is not present   
 
 **Login to GUI**
