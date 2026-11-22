@@ -247,9 +247,9 @@ The name of the service account is ex280sa
 The service account allows pods to be run as any available user   
 
 ============
-***oc new-project apples*** 
-***oc create sa ex280sa*** 
-*****oc adm policy add-scc-to -user anyuid -z ex280sa***** 
+***oc new-project apples***   
+***oc create sa ex280sa***    
+*****oc adm policy add-scc-to -user anyuid -z ex280sa*****   
 
 =============
 # Question 11
