@@ -100,8 +100,8 @@ Configure your openshift cluster to use quotas in the manhattan project with fol
 The name of the quota is: **ex280-quota**  
 The amount of memory consumed across all conatiner may not exceed 160 Mi  
 The total amount of cpu consumed across all conatiner may not exceed 2 full cores  
-The maximum no .of replication controllers does not exceed 3  
-The maximum no of pods does not exceed 3 
+The maximum no .of replication controllers does not exceed 3     
+The maximum no of pods does not exceed 3    
 The max no of service does not exceed 6  
 
 **use CLI in exam**
