@@ -5,6 +5,9 @@ Password:  ZXUPv-bv9xC-T4wAj-ngJuM
 =======================================
 # while oc whoami getting EOF use this cmd lab start auth-providers 
 
+<img width="773" height="378" alt="image" src="https://github.com/user-attachments/assets/c8bb3fb9-948c-44ea-8276-53aee2fe39d0" />
+
+
 Ram sir redhat 
 ---------------
 ram.redhat123
@@ -239,7 +242,7 @@ The application output should no longer display: SORRY, application is not confi
 
 ***curl http://HOST/PORT***
 
-# Question 10
+# Question 10 use cli
 
 Configure a service account  
 Configure a service account in the apples project to meet the following requirements.    
@@ -260,28 +263,31 @@ The service account allows pods to be run as any available user
 ## The application produces output  
 ## The application uses the ex280sa service account   
 ==============
-## In exam will get pod in error/crashloopback issue.
-## The End goal is we have to map service acc to deployemnt
-**for our lab practice**
-**oc new-project apple**
-oc ge sa
-**oc create deploy orange --image=registry.ocp4.example.com:8443/redhattraining/gitlab-ce:8.4.3-ce.0**
-**oc expose deployment orange --port=8080**
-**oc expose service orange**
-**oc get po**
-**oc logs orange** ***We will get permission denied**
+## In exam will get pod in error/crashloopback issue.  
+## The End goal is we have to map service acc to deployemnt   
+**for our lab practice**  
+**oc new-project apple**  
+## oc ge sa   
+**oc create deploy orange --image=registry.ocp4.example.com:8443/redhattraining/gitlab-ce:8.4.3-ce.0**  
+**oc expose deployment orange --port=8080**   
+**oc expose service orange**  
+**oc get po**  
+**oc logs orange** ***We will get permission denied**  
 ***In exam***
-oc get po 
-oc get sa ex280
-oc get route 
-oc set set service account 
-oc get endpoint  ***This cmd show instead of ip it show none once we map ths labels then it will show ip address in endpoint**
-## oc get pod --show-labels **service selector values to pod label match**
-## oc edit service orange **we have make labes in service as labels cmd what we get**
-oc get route will get url check in browser 
+## oc get po   
+## oc logs of pod
+## oc get sa 
+## oc get route   
+# oc set serviceaccount deploy orange  ex280sa  (deployment name +service acc name)
+## oc get endpoint  ***This cmd show instead of ip it show none once we map ths labels then it will show ip address in endpoint**  
+# oc get pod --show-labels **service selector values to match pod labels**  
+# oc edit service orange **pod labels should match service selector**  
+## oc get endpoints  
+## oc get route will get url check in browser   
+<img width="929" height="342" alt="image" src="https://github.com/user-attachments/assets/916a3676-876c-4bba-b6ce-cd3a83752c63" />
 
 
-oc set serviceaccount deploy orange ex280-sa
+## oc set serviceaccount deploy orange ex280-sa
 
 # Question 12
 
@@ -327,12 +333,7 @@ oc create deploy mysql --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhe
 
 oc create -f deploy.yml
 
-
-
 <img width="1486" height="639" alt="image" src="https://github.com/user-attachments/assets/d65da9e5-bbcf-4e79-8795-6b1afc5f8395" />
-
-
-
 
 we will get same type of app in checker namespace
 oc create deploy wordpress --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n checker --dry-run -o yaml > deploy.yml
