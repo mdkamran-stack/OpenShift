@@ -241,10 +241,10 @@ The application output should no longer display: SORRY, application is not confi
 
 # Question 10
 
-Configure a service account
-Configure a service account in the apples project to meet the following requirements.  
-The name of the service account is ex280sa  
-The service account allows pods to be run as any available user  
+Configure a service account  
+Configure a service account in the apples project to meet the following requirements.    
+The name of the service account is ex280sa    
+The service account allows pods to be run as any available user   
 
 ============
 ***oc new-project apples*** 
