@@ -219,7 +219,7 @@ The secret defines an environment variable with the name: DECODER_RING.
 The application output should no longer display: SORRY, application is not configured correctly.  
 
 ## we are deploying dummy app for practice 
-**oc create deployment --image registry.ocp4.example.com:8443/redhattraining/hello-world-nginx**
+**oc create deployment qed --image=registry.ocp4.example.com:8443/redhattraining/hello-world-nginx**
 **oc get deployment**
 **oc expose deployment qed --port=8080**
 **oc expose service qed**
@@ -229,10 +229,11 @@ The application output should no longer display: SORRY, application is not confi
 
 ## In exam we have to map using below 
 
-***oc set env deployment qed --from=secret/magic***
+# oc set env deployment qed --from=secret/magic
 ## To verify secret is mapped or not in deployment file it will show decoder_ring
 ***oc edit deployment >> To check the Decoder_ring is mapped properly***
 **After that new pod will create**
+## oc get pod 
 
 ***oc get route***
 
