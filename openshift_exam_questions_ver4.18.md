@@ -68,7 +68,8 @@ manhattan
 gemini  
 bluebook  
 titan  
-The user account armstrong is an adminstrator for project apollo and project gemini, The user account wozniak can view project titan but not administer or delete it.    
+The user account armstrong is an adminstrator for project apollo and project gemini  
+The user account wozniak can view project titan but not administer or delete it.    
 
 1> Goto HOME > Projects > Create projevt like apollo gemini , bluebook, titan > Display name anything >   
 2> User management > rolebinding > Crete rolebinding **namespace** >> name anything > namesapce>  project apollo &  > selectrole > admin > username armstring && same as for gemini project  
