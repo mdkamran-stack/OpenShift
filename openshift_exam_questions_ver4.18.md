@@ -252,13 +252,13 @@ The service account allows pods to be run as any available user
 *****oc adm policy add-scc-to -user anyuid -z ex280sa*****   
 
 =============
-# Question 11
+# Question 11  
 
-Deploy an application  
-Deploy the application called oranges in the apples project so that the following condition.  
-No configuration components have been added or removed  
-The application produces output  
-The application uses the ex280sa service account   
+## Deploy an application  
+## Deploy the application called oranges in the apples project so that the following condition.  
+## No configuration components have been added or removed  
+## The application produces output  
+## The application uses the ex280sa service account   
 ==============
 ## In exam will get pod in error/crashloopback issue.
 ## The End goal is we have to map service acc to deployemnt
