@@ -298,10 +298,15 @@ The application produces output
 -------
 ## Main reason for Deployment and pod failure is its consumed more memory 
 ## So 80GB so node having Memory issue will not start 
-## We will reduce or remove the memory portion from deployment after POD/Deployment will UP.
-## Project already Configure already
+## We will reduce or remove the memory portion from deployment after POD/Deployment will UP.  
+## Project already Configure already   
 In Lab we will create Deployment and but in exam all are created.
-Images: “registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:v1.0"
+***oc new-project mercury***
+ ***oc create deploy atlas --image=registry.ocp4.example.com:8443/redhattraining/hello-worldnginx:latest --dry-run -o yaml  > deploy.yml***
+ **oc create -f  deploy.yml**
+ ***vi deploy.yml** They will put quota limit in file 
+ <img width="596" height="515" alt="image" src="https://github.com/user-attachments/assets/197120ac-f392-46c8-8612-ca10f852334f" />
+
 <img width="975" height="224" alt="image" src="https://github.com/user-attachments/assets/db1bb240-2800-4a12-8aa3-676061eaca46" />
 # Pod is Pending Due resource Crunch 
 # we have to go to deployment in exam 
