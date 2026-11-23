@@ -302,7 +302,7 @@ The application produces output
 ## Project already Configure already   
 In Lab we will create Deployment and but in exam all are created.
 ***oc new-project mercury***
- ***oc create deploy atlas --image=registry.ocp4.example.com:8443/redhattraining/hello-worldnginx:latest --dry-run -o yaml  > deploy.yml***
+ ***oc create deploy atlas --image=registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:v1.0 --dry-run -o yaml  > deploy.yml***
  **oc create -f  deploy.yml**
  ***vi deploy.yml** They will put quota limit in file 
 
