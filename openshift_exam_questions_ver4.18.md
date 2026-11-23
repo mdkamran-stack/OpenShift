@@ -182,12 +182,12 @@ you may use the telnet or nc commands to validate the deployment.
 if pod not running in local lab then edit deployment and update image  registry.ocp4.example.com:8443/etherpad/etherpad:1.8.18   
 # In exam  
 
-**we have to create project**
-**helm repo add xyz https:app.domain.com** 
-**helm repolist**  
-**helm search repo**  
-**helm install movie chart-name**  
-**oc get po**  
+**we have to create project**  
+**helm repo add xyz https:app.domain.com**    
+**helm repolist**   
+**helm search repo**    
+**helm install movie chart-name**   
+**oc get po**    
 **oc get deploy**
 **oc get route**
 
