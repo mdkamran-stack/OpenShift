@@ -330,7 +330,7 @@ In NS we have to create a policy on pod labels match **network.openshift.io/poli
 
 **oc create ns database  
 **oc create ns checker   
-Now we have to deploy app in both project for practice. 
+Now we have to deploy app in both project for practice.   
 oc create deploy mysql --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n database --dry-run -o yaml > deploy.yml   
 
 ## It is already their in exam this is for practice purpose   
