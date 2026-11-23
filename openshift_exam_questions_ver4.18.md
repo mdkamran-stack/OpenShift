@@ -6,7 +6,9 @@ Password:  ZXUPv-bv9xC-T4wAj-ngJuM
 # while oc whoami getting EOF use this cmd lab start auth-providers 
 
 <img width="773" height="378" alt="image" src="https://github.com/user-attachments/assets/c8bb3fb9-948c-44ea-8276-53aee2fe39d0" />
-
+<span style="color:red">
+oc adm policy add-scc-to-user anyuid -z ex280sa
+</span>
 
 Ram sir redhat 
 ---------------
