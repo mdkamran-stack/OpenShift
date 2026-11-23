@@ -26,6 +26,9 @@ The user account aldrin is present and can log in with password roonkere
 The user account jobs is present and can log with sestiver   
 The user account wozniak is present and can log in with password glegunge.  
 
+<details>
+<summary><b>Show Answer</b></summary>
+
 **use GUI in exam**
 **Solution**
 ### First create users htpasswd -c -b -B - openshift-passwd jobs redhat  
@@ -41,6 +44,7 @@ Login to GUI admin> cluster settings > configuration > Oauth > htpasswd >
 ## oc get oauth/cluster -o yaml > is.yml  >  vi is.yml  update secret name 
 ## oc replace -f is.yml  >> oc get pod -n openshift-authentication
 oc login -u username -p password 
+</details>
 
 
 if auth fails 
