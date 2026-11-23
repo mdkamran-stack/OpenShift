@@ -51,7 +51,7 @@ if auth fails
 =================
 echo "192.168.64.129 oauth-openshift.apps.king.flahcloud.com" >> /etc/hosts
 
-# Question2 
+# Question2 **use GUI in exam**
 Configure cluster permissions    
 configure your openshift cluster to meet the following requirements.  
 The user account jobs can perform cluster administration tasks.  **cluster_admin**  
@@ -60,15 +60,18 @@ The user account wozniak cannot  perform cluster administration task
 The use account armstrong cannot  create projects  
 The user account kubeadmin is not present   
 
+<details>
+<summary><b>Show Answer</b></summary>
 **Login to GUI**
 
 1> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xyz > **Role Name** **cluster_admin**  > User name  
 2> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xab > **Role Name** **self-provisioner** > wozniak   
 3> We have to remove the **self-provisioners** if self-proviosners not their it means already deleted    
 4 **NOTE** One we completed all questions at last we have to goto **WORKload** >> Secret >> under name space **kube-system** delete kubeadmin  
-**use GUI in exam**
 
-# Question3
+</details>
+
+# Question3  **use GUI in exam**
 
 ## Configure Project permissions.configure your Openshift cluster to meet the following requirements: The following projects exists.  
 apollo  
@@ -83,9 +86,8 @@ The user account wozniak can view project titan but not administer or delete it.
 2> User management > rolebinding > Crete rolebinding **namespace** >> name anything > namesapce>  project apollo &  > selectrole > admin > username armstring && same as for gemini project  
 2> here we have to bind **select role view** 
 
-**use GUI in exam**
 
-# Question4
+# Question4   **use GUI in exam**
 
 Configure groups
 Configure your Openshift cluster to meet the following requirements.  
@@ -95,13 +97,15 @@ The user account aldrin is a member of the pilot group
 Members of the commander group have edit permission in the apollo project  
 Members of the pilot group have view permission in the apollo Project.  
 
-**use GUI in exam**
+<details>
+<summary><b>Show Answer</b></summary>
 
 1> Under usermgmt select group create a group & name in one short 
 2> role-binding  select rolebinding namespace role binding > select namespace and Rolename & goups name permission edit in second case give permission view  
 
+</details>
 
-# Question5
+# Question5   **use CLI in exam**
 
 **Configure Quota**
 Configure your openshift cluster to use quotas in the manhattan project with following reuirements.  
@@ -112,12 +116,15 @@ The maximum no .of replication controllers does not exceed 3
 The maximum no of pods does not exceed 3    
 The max no of service does not exceed 6  
 
-**use CLI in exam**
+<details>
+<summary><b>Show Answer</b></summary>  
+ 
 oc project
 oc new-project manhattan >> oc project manhattan >>  
 # oc create quota ex280-quota --help   
 
 --hard=cpu=2,memory=160Mi,pods=3,services=6,replicationcontrollers=3
+</details>
 
 
 # Question6
@@ -146,10 +153,12 @@ The application produces output
 ***openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt***  && put the given informations. like ca org .  domain name should be in exam its diff classified.apps.doman20.eample.com
 ## To create Routing 
 ## oc get service will get name of service 
-***oc create route edge --service oxcart --cert=certifiacte.crt --key=private.key --hostname=classified.apps.ocp4.example.com***  
+## Now we have to create route
 ## To verify
 **curl -kv https://classified.apps.ocp4.example.com**
 
+<details>
+<summary><b>Show Answer</b></summary>
 ## In Exam 
 ***oc new-project projectname***  
 ***oc get deploy***
@@ -162,6 +171,7 @@ The application produces output
  ***Now we have create own route two way cmd or GUI**if UI goto Network Routes in specified project.
  ## Below is cmd line 
  ***oc create route edge --service oxcart --cert=certificate.crt --key=private.key --hostname=classified.apps.ocp4.example.com***
+ </details>
 
 ## In laptop
 **oc create deployment oxcart  nginx-test --image=docker.io/nginxinc/nginx-unprivileged:latest** use this image for practice.  
@@ -174,6 +184,8 @@ The application produces output
 **http://helm.domain20.example.com/chart/**   
 you may use the telnet or nc commands to validate the deployment.
 
+<details>
+<summary><b>Show Answer</b></summary>
 **oc new-project ascii-movie**  
 # for practice   
 **helm repo add xyz http://helm.ocp4.example.com/charts**  
@@ -184,8 +196,8 @@ you may use the telnet or nc commands to validate the deployment.
 **oc get route -n ascii-movie**   
 **To verify using telnet or nc**   
 if pod not running in local lab then edit deployment and update image  registry.ocp4.example.com:8443/etherpad/etherpad:1.8.18   
-# In exam  
 
+# In exam  
 **we have to create project**  
 **helm repo add xyz https:app.domain.com**    
 **helm repolist**   
@@ -194,7 +206,7 @@ if pod not running in local lab then edit deployment and update image  registry.
 **oc get po**    
 **oc get deploy**
 **oc get route**
-
+ </details>
 
 # Question 8
 
@@ -204,14 +216,15 @@ if pod not running in local lab then edit deployment and update image  registry.
 **The secret defines a key with name: decoder_ring**    
 **The secret defines the key with value: XPWPKDDCP3T**   
 
-=======
+<details>
+<summary><b>Show Answer</b></summary>
 **cmd line** oc new-project math  **oc create secret generic magic --from-literal decoder_ring="aaaa"**   
 
 Create one project by given name   
 **login gui underworkload their is secret put the secret name , key and value**    
 
 <img width="1527" height="498" alt="image" src="https://github.com/user-attachments/assets/27dfe209-a252-4860-8ae8-499cfb7c24af" />   
-
+ </details>
 
 
 # Question 9  
@@ -235,6 +248,8 @@ The application output should no longer display: SORRY, application is not confi
 ## To verify we will get some result instead of sorry
 **curl and hostpath**  
 
+<details>
+<summary><b>Show Answer</b></summary>
 ## In exam we have to map using below 
 
 # oc set env deployment qed --from=secret/magic  
@@ -247,6 +262,8 @@ The application output should no longer display: SORRY, application is not confi
 
 ***curl http://HOST/PORT***
 
+ </details>
+
 # Question 10 use cli
 
 Configure a service account  
@@ -254,10 +271,13 @@ Configure a service account in the apples project to meet the following requirem
 The name of the service account is ex280sa    
 The service account allows pods to be run as any available user   
 
+<details>
+<summary><b>Show Answer</b></summary>
 ============
 ***oc new-project apples***   
 ***oc create sa ex280sa***    
 *****oc adm policy add-scc-to -user anyuid -z ex280sa*****   
+ </details>
 
 =============
 # Question 11  
@@ -278,19 +298,21 @@ The service account allows pods to be run as any available user
 **oc expose service orange**  
 **oc get po**  
 **oc logs orange** ***We will get permission denied**  
+<details>
+<summary><b>Show Answer</b></summary>
 ***In exam***
 ## oc get po   
 ## oc logs of pod
 ## oc get sa 
 ## oc get route   
-# oc set serviceaccount deploy orange  ex280sa  (deployment name +service acc name)
+# oc set serviceaccount deploy orange  ex280sa  (deployment name +service acc name)  In exam we have execute this cmd 
 ## oc get endpoint  ***This cmd show instead of ip it show none once we map ths labels then it will show ip address in endpoint**  
 # oc get pod --show-labels **service selector values to match pod labels**  
 # oc edit service orange **pod labels should match service selector**  
 ## oc get endpoints  
 ## oc get route will get url check in browser   
 <img width="929" height="342" alt="image" src="https://github.com/user-attachments/assets/916a3676-876c-4bba-b6ce-cd3a83752c63" />
-
+ </details>
 
 ## oc set serviceaccount deploy orange ex280-sa
 
@@ -356,6 +378,8 @@ oc create deploy wordpress --image=registry.ocp4.example.com:8443/rhscl/mysql-57
 oc get po -n database 
 oc get po -n checker 
 
+<details>
+<summary><b>Show Answer</b></summary>
 # In exam checker namespace pod in crashloopbakc due to not connecting to app 
 
 # In exam we have to perform graphical it is easy way 
@@ -376,11 +400,7 @@ Lables & selector
 # Add the port 3306 & res
 <img width="685" height="165" alt="image" src="https://github.com/user-attachments/assets/38ea398f-c4e9-4277-9ff5-bbceb650d5c8" />
 # Finally after delting the pod in checker namsepace it will come in running mode
-
-
-
-
-
+ </details>
 
 
 
