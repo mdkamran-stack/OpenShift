@@ -328,26 +328,26 @@ In Lab we will create Deployment and but in exam all are created.
 ===========================
 In NS we have to create a policy on pod labels match **network.openshift.io/policy-group** we have to allow lable team devsecops 
 
-**oc create ns database 
-**oc create ns checker 
-Now we have to deploy app in both project for practice.
-oc create deploy mysql --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n database --dry-run -o yaml > deploy.yml
+**oc create ns database  
+**oc create ns checker   
+Now we have to deploy app in both project for practice. 
+oc create deploy mysql --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n database --dry-run -o yaml > deploy.yml   
 
-## It is already their in exam this is for practice purpose 
-<img width="647" height="412" alt="image" src="https://github.com/user-attachments/assets/3ae6cfe5-3b20-4214-9c95-9d4d6ea38a53" />
+## It is already their in exam this is for practice purpose   
+<img width="647" height="412" alt="image" src="https://github.com/user-attachments/assets/3ae6cfe5-3b20-4214-9c95-9d4d6ea38a53" />  
 
-oc create -f deploy.yml
+oc create -f deploy.yml  
 
-<img width="1486" height="639" alt="image" src="https://github.com/user-attachments/assets/d65da9e5-bbcf-4e79-8795-6b1afc5f8395" />
+<img width="1486" height="639" alt="image" src="https://github.com/user-attachments/assets/d65da9e5-bbcf-4e79-8795-6b1afc5f8395" />  
 
-we will get same type of app in checker namespace
-oc create deploy wordpress --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n checker --dry-run -o yaml > deploy.yml
+we will get same type of app in checker namespace   
+oc create deploy wordpress --image=registry.ocp4.example.com:8443/rhscl/mysql-57-rhel7:latest -n checker --dry-run -o yaml > deploy.yml  
 
-<img width="842" height="430" alt="image" src="https://github.com/user-attachments/assets/c4be9830-bf5c-45bd-b524-5842431e44ed" />
+<img width="842" height="430" alt="image" src="https://github.com/user-attachments/assets/c4be9830-bf5c-45bd-b524-5842431e44ed" />  
 
-#oc create -f deploy.yml -n checker
+#oc create -f deploy.yml -n checker   
 
-## NS also having labels oc label ns checker team:devsceops it laready their in exam 
+## NS also having labels oc label ns checker team:devsceops it laready their in exam   
 
 oc get po -n database 
 oc get po -n checker 
