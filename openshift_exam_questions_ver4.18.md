@@ -7,8 +7,6 @@ Password:  ZXUPv-bv9xC-T4wAj-ngJuM
 
 <img width="773" height="378" alt="image" src="https://github.com/user-attachments/assets/c8bb3fb9-948c-44ea-8276-53aee2fe39d0" />   
 
-🔴 **ram.redhat123**
-<span style="color:red">ram.redhat123</span>
 
 Ram sir redhat 
 ---------------
@@ -123,9 +121,9 @@ The max no of service does not exceed 6
  
 oc project
 oc new-project manhattan >> oc project manhattan >>  
-<span style="color:red">
+
 # oc create quota ex280-quota --help   
-</span>
+
 --hard=cpu=2,memory=160Mi,pods=3,services=6,replicationcontrollers=3
 </details>
 
@@ -173,9 +171,9 @@ The application produces output
  ***Now we have delete the exisiting route oc delete route oxcart***
  ***Now we have create own route two way cmd or GUI**if UI goto Network Routes in specified project.
  ## Below is cmd line 
- <span style="color:red">
+ 
  ***oc create route edge --service oxcart --cert=certificate.crt --key=private.key --hostname=classified.apps.ocp4.example.com***
-  </span>
+  
  </details>
 
 ## In laptop
