@@ -298,10 +298,12 @@ The service account allows pods to be run as any available user
 **oc new-project apple**  
 ## oc ge sa   
 **oc create deploy orange --image=registry.ocp4.example.com:8443/redhattraining/gitlab-ce:8.4.3-ce.0**  
-**oc expose deployment orange --port=8080**   
+**oc expose deployment orange --port=80**   
 **oc expose service orange**  
 **oc get po**  
 **oc logs orange** ***We will get permission denied**  
+<img width="1098" height="301" alt="image" src="https://github.com/user-attachments/assets/32f67097-3967-416e-9c49-76e8173cca8a" />
+
 <details>
 <summary><b>Show Answer</b></summary>
 ***In exam***
