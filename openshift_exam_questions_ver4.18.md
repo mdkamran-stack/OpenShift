@@ -412,7 +412,9 @@ Lables & selector
 <img width="1092" height="603" alt="image" src="https://github.com/user-attachments/assets/f9f848ba-fc63-4c74-af41-62b96060a4cc" />
 # Add the port 3306 & res
 <img width="685" height="165" alt="image" src="https://github.com/user-attachments/assets/38ea398f-c4e9-4277-9ff5-bbceb650d5c8" />
+
 # Finally after delting the pod in checker namsepace it will come in running mode
+
  </details>
 
 
