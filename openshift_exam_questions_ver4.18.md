@@ -66,8 +66,8 @@ The user account kubeadmin is not present
 
 1> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xyz > **Role Name** **cluster_admin**  > User name  
 2> Goto user management > RoleBinding > **cluster Wide Role Binding** Name xab > **Role Name** **self-provisioner** > wozniak   
-3> We have to remove the **self-provisioners** if self-proviosners not their it means already deleted    
-4 **NOTE** One we completed all questions at last we have to goto **WORKload** >> Secret >> under name space **kube-system** delete kubeadmin  
+3> We have to remove the **self-provisioners** if self-proviosners not their it means already deleted   **from role binding under kube-system**
+4 **NOTE** One we completed all questions at last we have to goto **WORKload** >> Secret >> **under name space **kube-system** delete kubeadmin**
 
 </details>
 
