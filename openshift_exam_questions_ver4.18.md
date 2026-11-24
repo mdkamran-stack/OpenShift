@@ -306,6 +306,7 @@ The service account allows pods to be run as any available user
 
 <details>
 <summary><b>Show Answer</b></summary>
+ 
 ***In exam***
 ## oc get po   
 ## oc logs of pod
@@ -318,6 +319,7 @@ The service account allows pods to be run as any available user
 ## oc get endpoints  
 ## oc get route will get url check in browser   
 <img width="929" height="342" alt="image" src="https://github.com/user-attachments/assets/916a3676-876c-4bba-b6ce-cd3a83752c63" />
+
  </details>
 
 ## oc set serviceaccount deploy orange ex280-sa
