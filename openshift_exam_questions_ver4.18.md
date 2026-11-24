@@ -190,6 +190,7 @@ you may use the telnet or nc commands to validate the deployment.
 
 <details>
 <summary><b>Show Answer</b></summary>
+ 
 **oc new-project ascii-movie**  
 # for practice   
 **helm repo add xyz http://helm.ocp4.example.com/charts**  
@@ -204,12 +205,13 @@ if pod not running in local lab then edit deployment and update image  registry.
 # In exam  
 **we have to create project**  
 **helm repo add xyz https:app.domain.com**    
-**helm repolist**   
-**helm search repo**    
-**helm install movie chart-name**   
-**oc get po**    
-**oc get deploy**
-**oc get route**
+**helm repolist**    
+**helm search repo**      
+**helm install movie chart-name**     
+**oc get po**      
+**oc get deploy**  
+**oc get route**  
+
  </details>
 
 # Question 8
