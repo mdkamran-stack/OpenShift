@@ -160,19 +160,20 @@ The application produces output
 
 <details>
 <summary><b>Show Answer</b></summary>
-## In Exam 
+ 
+## In Exam   
 ***oc new-project projectname***  
-***oc get deploy***
-***oc get service***  
-***oc get route***  
-# In exam we will get script named newcert pass argument hello 
+***oc get deploy***  
+***oc get service***   
+***oc get route***   
+# In exam we will get script named newcert pass argument hello   
 # now build SSL certificate from cmd of given script called newcert Then ls to veriy our .crt & .key file 
  
  ***Now we have delete the exisiting route oc delete route oxcart***
  ***Now we have create own route two way cmd or GUI**if UI goto Network Routes in specified project.
- ## Below is cmd line 
+ ## Below is cmd line   
  
- ***oc create route edge --service oxcart --cert=certificate.crt --key=private.key --hostname=classified.apps.ocp4.example.com***
+ ***oc create route edge --service oxcart --cert=certificate.crt --key=private.key --hostname=classified.apps.ocp4.example.com***  
   
  </details>
 
