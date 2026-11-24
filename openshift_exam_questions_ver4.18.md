@@ -54,8 +54,8 @@ echo "192.168.64.129 oauth-openshift.apps.king.flahcloud.com" >> /etc/hosts
 # Question2 **use GUI in exam**
 Configure cluster permissions    
 configure your openshift cluster to meet the following requirements.  
-The user account jobs can perform cluster administration tasks.  **cluster_admin**  
-The user account wozniak can create projects  **self_provisioner**  
+The user account jobs can perform cluster administration tasks.  
+The user account wozniak can create projects    
 The user account wozniak cannot  perform cluster administration task 
 The use account armstrong cannot  create projects  
 The user account kubeadmin is not present   
