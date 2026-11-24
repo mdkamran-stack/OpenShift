@@ -185,6 +185,7 @@ The application produces output
 **Deploy an application**  
 **EX280 exam prepared for Deploy the chart named **redhat-movie** in the **project ascii-movie** from the repository**   
 **http://helm.domain20.example.com/chart/**   
+In personal lab we have to use this  http://helm.ocp4.example.com/charts
 you may use the telnet or nc commands to validate the deployment.
 
 <details>
