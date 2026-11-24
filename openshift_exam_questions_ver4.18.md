@@ -316,7 +316,12 @@ The service account allows pods to be run as any available user
 ## oc get endpoint  ***This cmd show instead of ip it show none once we map ths labels then it will show ip address in endpoint**  
 # oc get pod --show-labels **service selector values to match pod labels**  
 # oc edit service orange **pod labels should match service selector**  
-## oc get endpoints  
+## oc get endpoints  # we will get none it should be ip address 
+# pod label should match service selector
+<img width="934" height="324" alt="image" src="https://github.com/user-attachments/assets/1d078214-de3d-44c8-9d64-a1444989f397" />
+
+<img width="976" height="646" alt="image" src="https://github.com/user-attachments/assets/433b07fa-1b28-4e82-b0fb-9257122df940" />
+
 ## oc get route will get url check in browser   
 <img width="929" height="342" alt="image" src="https://github.com/user-attachments/assets/916a3676-876c-4bba-b6ce-cd3a83752c63" />
 
