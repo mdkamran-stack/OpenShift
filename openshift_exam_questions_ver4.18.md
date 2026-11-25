@@ -1,4 +1,4 @@
-<img width="597" height="677" alt="image" src="https://github.com/user-attachments/assets/a490fab0-923f-456f-a378-0e779109f723" />console openshift
+
 =================================
 Kubeadmin 
 Password:  ZXUPv-bv9xC-T4wAj-ngJuM
@@ -449,7 +449,7 @@ We have to make sure to remove namespace on limit
 
 
 
-
+<img width="597" height="677" alt="image" src="https://github.com/user-attachments/assets/a490fab0-923f-456f-a378-0e779109f723" />console openshift
 
 
 
