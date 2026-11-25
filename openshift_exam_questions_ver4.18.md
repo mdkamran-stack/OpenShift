@@ -1,4 +1,4 @@
-console openshift
+<img width="597" height="677" alt="image" src="https://github.com/user-attachments/assets/a490fab0-923f-456f-a378-0e779109f723" />console openshift
 =================================
 Kubeadmin 
 Password:  ZXUPv-bv9xC-T4wAj-ngJuM
@@ -419,6 +419,66 @@ Lables & selector
 # Finally after delting the pod in checker namsepace it will come in running mode
 
  </details>
+
+ # Question 14
+
+ ## Configure a project template 
+
+ ### Configure your Openshift Cluster so that new projects are created with limits using the following requirements.  
+
+ ### The Name of the limit range is: PROJECT NAME-Limits where PROJECT NAME is the name of the project created using ac new-project The amount of memory consumed by a single container is between 160Mi and 16Mi with a default of 512Mi and default request of 256Mi.  
+
+ # Solution: to 
+
+***oc adm create-bootstrap-project-template -o yaml > is.yml***  **In this file we have to add limit range definations**
+## We have move GUI Administration >> LimitRange and copy yaml manifest and add to is.yml  
+
+We have to make sure to remove namespace on limit 
+
+<img width="511" height="636" alt="image" src="https://github.com/user-attachments/assets/013b5169-38ff-47cc-9d62-c952a1b4ca25" />
+
+#Make sure from Remove namespace tab from yaml.
+
+**oc create -f is.yml openshift-config**
+
+## Now need to tell ref Api (tell Openshift use this Project template)so we need to edit object like project.config add namespace name
+
+**oc edit project.config.openshift.io cluster**  
+
+<img width="611" height="473" alt="image" src="https://github.com/user-attachments/assets/19042288-8a30-411e-9153-562622501413" />
+
+
+
+
+
+
+
+
+
+ 
+
+
+# Question 15 
+
+## Install the file-integrity operator with the following. 
+### The operator is installed in the openshift project 
+### The approval strategy is Automatic  
+### Cluster monitoring is enabled for the openshift-file-integrity project.  
+
+# Question 16 
+
+## Create a Cron job using the image at registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:latest with the following requirements.  
+## The cron job name is job-runner 
+## The cron job runs at 04:04 on the 2nd day of every month.  
+## The successful job histroy limit is 14 
+## The service account and service account name is magna 
+## The cron job runs in the project called elementum 
+
+
+ 
+
+ 
+ 
 
 
 
