@@ -332,8 +332,6 @@ The service account allows pods to be run as any available user
 
  </details>
 
-## oc set serviceaccount deploy orange ex280-sa
-
 # Question 12
 
 Deploy an application called atlas in the mercury project so that the following condition.  
