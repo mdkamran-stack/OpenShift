@@ -448,14 +448,9 @@ We have to make sure to remove namespace on limit
 <img width="611" height="473" alt="image" src="https://github.com/user-attachments/assets/19042288-8a30-411e-9153-562622501413" />
 
 
-
 <img width="597" height="677" alt="image" src="https://github.com/user-attachments/assets/a490fab0-923f-456f-a378-0e779109f723" />console openshift
 
 
-
-
-
- 
 
 
 # Question 15 
@@ -465,6 +460,14 @@ We have to make sure to remove namespace on limit
 ### The approval strategy is Automatic  
 ### Cluster monitoring is enabled for the openshift-file-integrity project.  
 
+## Solution 
+
+1> Select this 
+<img width="1419" height="639" alt="image" src="https://github.com/user-attachments/assets/2a56e65b-a392-4985-9114-fa7266d40a28" />
+
+2 > install it 
+
+3> View Operator >> file integirty >> create instance 
 # Question 16 
 
 ## Create a Cron job using the image at registry.ocp4.example.com:8443/redhattraining/hello-world-nginx:latest with the following requirements.  
@@ -473,6 +476,13 @@ We have to make sure to remove namespace on limit
 ## The successful job histroy limit is 14 
 ## The service account and service account name is magna 
 ## The cron job runs in the project called elementum 
+
+## solution:
+
+<img width="1248" height="479" alt="image" src="https://github.com/user-attachments/assets/2936800b-3982-46df-a5d1-a87f23bc5f1c" />
+
+<img width="892" height="638" alt="image" src="https://github.com/user-attachments/assets/42503340-c50f-468e-a31c-0f38f85c630d" />
+
 
 
  
