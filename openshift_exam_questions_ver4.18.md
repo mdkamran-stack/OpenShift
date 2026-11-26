@@ -433,28 +433,27 @@ Lables & selector
  # Solution: to 
 
 ***oc adm create-bootstrap-project-template -o yaml > is.yml***  **In this file we have to add limit range definations**
-## We have move GUI Administration >> LimitRange and copy yaml manifest and add to is.yml  
+## We have move GUI Administration >> LimitRange and copy yaml manifest and add to is.yml    
 
-We have to make sure to remove namespace on limit 
+We have to make sure to remove namespace on limit   
 
-<img width="511" height="636" alt="image" src="https://github.com/user-attachments/assets/013b5169-38ff-47cc-9d62-c952a1b4ca25" />
+<img width="511" height="636" alt="image" src="https://github.com/user-attachments/assets/013b5169-38ff-47cc-9d62-c952a1b4ca25" />  
 
-#Make sure from Remove namespace tab from yaml.
+#Make sure from Remove namespace tab from yaml.  
 
-**oc create -f is.yml -n openshift-config**
+**oc create -f is.yml -n openshift-config**   
 
-**we can verify it** **oc get template -n openshift-config**
+**we can verify it** **oc get template -n openshift-config**     
 
-## Now need to tell ref Api (tell Openshift use this Project template)so we need to edit object like project.config add namespace name
+## Now need to tell ref Api (tell Openshift use this Project template)so we need to edit object like project.config add namespace name   
 
-**oc edit project.config.openshift.io cluster**  
+**oc edit project.config.openshift.io cluster**     
 
-***Now Check Pon will recreated at -n openshift-apiserver***
+***Now Check Pon will recreated at -n openshift-apiserver***   
 
-**oc get po -n openshift-apiserver**
+**oc get po -n openshift-apiserver**     
 
-<img width="611" height="473" alt="image" src="https://github.com/user-attachments/assets/19042288-8a30-411e-9153-562622501413" />
-
+<img width="611" height="473" alt="image" src="https://github.com/user-attachments/assets/19042288-8a30-411e-9153-562622501413" />     
 
 
 
