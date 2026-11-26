@@ -428,6 +428,8 @@ Lables & selector
 
  ### The Name of the limit range is: PROJECT NAME-Limits where PROJECT NAME is the name of the project created using ac new-project The amount of memory consumed by a single container is between 160Mi and 16Mi with a default of 512Mi and default request of 256Mi.  
 
+ for practice : > Minimum: 128Mi > Maximum: 1Gi > Default: 512Mi > Default request: 256Mi
+
  # Solution: to 
 
 ***oc adm create-bootstrap-project-template -o yaml > is.yml***  **In this file we have to add limit range definations**
@@ -439,7 +441,9 @@ We have to make sure to remove namespace on limit
 
 #Make sure from Remove namespace tab from yaml.
 
-**oc create -f is.yml openshift-config**
+**oc create -f is.yml -n openshift-config**
+
+**we can verify it** **oc get template -n openshift-config**
 
 ## Now need to tell ref Api (tell Openshift use this Project template)so we need to edit object like project.config add namespace name
 
