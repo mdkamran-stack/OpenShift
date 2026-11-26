@@ -449,10 +449,11 @@ We have to make sure to remove namespace on limit
 
 **oc edit project.config.openshift.io cluster**  
 
+***Now Check Pon will recreated at -n openshift-apiserver***
+
+**oc get po -n openshift-apiserver**
+
 <img width="611" height="473" alt="image" src="https://github.com/user-attachments/assets/19042288-8a30-411e-9153-562622501413" />
-
-
-<img width="597" height="677" alt="image" src="https://github.com/user-attachments/assets/a490fab0-923f-456f-a378-0e779109f723" />console openshift
 
 
 
