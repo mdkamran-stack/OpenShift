@@ -406,6 +406,8 @@ oc get po -n checker
 ## Add namespace selector 
 Lables & selector 
 
+## oc label ns checker team=devsecops
+
 ## Below ss show all 3 values which we have to placed in GUI n/w policy 
 
 <img width="1667" height="360" alt="image" src="https://github.com/user-attachments/assets/b4273dd1-b8aa-468c-bc6c-154d48b7893b" />
