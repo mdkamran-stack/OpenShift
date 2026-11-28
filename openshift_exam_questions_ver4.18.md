@@ -1,4 +1,5 @@
 
+https://api.lab.example.com:6443/
 =================================
 Kubeadmin 
 Password:  ZXUPv-bv9xC-T4wAj-ngJuM
